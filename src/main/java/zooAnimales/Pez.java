@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pez extends Animal{
-    private static ArrayList<Pez> listado = new ArrayList<Pez>();
+    private static ArrayList<Pez> listado = new ArrayList<>();
     public static int salmones;
     public static int bacalaos;
     private String colorEscamas;
