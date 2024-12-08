@@ -10,19 +10,17 @@ public class Animal {
     private String genero;
     private Zona zona;
 
-    public Animal(String nombre, int edad, String habitat, String genero, Zona zona){
+    public Animal(String nombre, int edad, String habitat, String genero){
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        this.zona = zona;
         totalAnimales++;
     }
     public Animal(){}
 
     public String toString() {
-
-        return ("Mi nombre es " + this.nombre + " tengo de edad " + this.edad + " habito en " + this.habitat + " y mi género es " + this.genero
+        return ("Mi nombre es " + this.nombre + " tengo de edad " + this.edad + " habito en " + this.habitat + " y mi genero es " + this.genero
         + " la zona en que me ubico es " + this.zona + ", en el " + this.zona.getZoo());
     }
 

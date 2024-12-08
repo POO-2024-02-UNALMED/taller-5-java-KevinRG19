@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Mamifero extends Animal{
     private static ArrayList<Mamifero> listado = new ArrayList<Mamifero>();
-    public int caballos;
-    public int leones;
+    public static int caballos;
+    public static int leones;
     private Boolean pelaje;
     private int patas;
 
-    public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona, Boolean pelaje, int patas) {
-        super(nombre, edad, habitat, genero, zona);
+    public Mamifero(String nombre, int edad, String habitat, String genero, Boolean pelaje, int patas) {
+        super(nombre, edad, habitat, genero);
         this.pelaje = pelaje;
         this.patas = patas;
         listado.add(this);
@@ -46,14 +46,15 @@ public class Mamifero extends Animal{
     public static int cantidadMamiferos() {
         return listado.size();
     }
-    public void crearCaballo(String nombre, int edad, String genero, Zona zona) {
+
+    public static void crearCaballo(String nombre, int edad, String genero) {
         caballos++;
-        new Mamifero(nombre, edad, "pradera", genero, zona, true, 4);
+        new Mamifero(nombre, edad, "pradera", genero, true, 4);
     }
 
-    public void crearLeon (String nombre, int edad, String genero, Zona zona) {
+    public static void crearLeon (String nombre, int edad, String genero) {
         leones++;
-        new Mamifero(nombre, edad, "selva", genero, zona, true, 4);
+        new Mamifero(nombre, edad, "selva", genero, true, 4);
     }
 
 }

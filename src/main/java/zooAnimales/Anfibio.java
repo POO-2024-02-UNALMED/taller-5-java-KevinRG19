@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Anfibio extends Animal{
     private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
-    public int ranas;
-    public int salamandras;
+    public static int ranas;
+    public static int salamandras;
     private String colorPiel;
     private Boolean venenoso;
 
-    public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, Boolean venenoso) {
-        super(nombre, edad, habitat, genero, zona);
+    public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, Boolean venenoso) {
+        super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
         listado.add(this);
@@ -50,13 +50,13 @@ public class Anfibio extends Animal{
     public static int cantidadAnfibios() {
         return listado.size();
     }
-    public void crearRana(String nombre, int edad, String genero, Zona zona){
+    public static void crearRana(String nombre, int edad, String genero){
         ranas++;
-        new Anfibio(nombre, edad, "selva", genero, zona, "rojo", true);
+        new Anfibio(nombre, edad, "selva", genero, "rojo", true);
     }
-    public void Salamandra(String nombre, int edad, String genero, Zona zona){
+    public static void crearSalamandra(String nombre, int edad, String genero){
         salamandras++;
-        new Anfibio(nombre, edad, "selva", genero, zona, "negro y amarillo", false);
+        new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
     }
 
 
