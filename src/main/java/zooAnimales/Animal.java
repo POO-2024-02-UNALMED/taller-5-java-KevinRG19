@@ -21,8 +21,11 @@ public class Animal {
 
     @Override
     public String toString() {
+        if (this.zona == null) {
+            return ("Mi nombre es " + this.nombre + " tengo de edad " + this.edad + " habito en " + this.habitat + " y mi genero es " + this.genero);
+        }
         return ("Mi nombre es " + this.nombre + " tengo de edad " + this.edad + " habito en " + this.habitat + " y mi genero es " + this.genero
-        + " la zona en que me ubico es " + this.zona + ", en el " + this.zona.getZoo());
+                + " la zona en que me ubico es " + this.zona + ", en el " + this.zona.getZoo());
     }
 
     public int getTotalAnimales() {
@@ -78,6 +81,6 @@ public class Animal {
     }
 
     public static String totalPorTipo() {
-        return ("Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: " + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnficios: " + Anfibio.cantidadAnfibios());
+        return "Mamiferos: " + Mamifero.cantidadMamiferos()+ "\n"+"Aves: " + Ave.cantidadAves()+ "\n"+"Reptiles: "+Reptil.cantidadReptiles()+"\n"+"Peces: "+Pez.cantidadPeces()+"\n"+"Anfibios: "+Anfibio.cantidadAnfibios();
     }
 }
