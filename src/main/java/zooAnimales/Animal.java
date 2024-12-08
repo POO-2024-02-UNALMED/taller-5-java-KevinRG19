@@ -17,7 +17,9 @@ public class Animal {
         this.genero = genero;
         totalAnimales++;
     }
-    public Animal(){}
+    public Animal(){
+
+    }
 
     @Override
     public String toString() {

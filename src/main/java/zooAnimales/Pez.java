@@ -18,7 +18,9 @@ public class Pez extends Animal{
         listado.add(this);
     }
 
-    public Pez() {}
+    public Pez() {
+        listado.add(this);
+    }
 
     public String movimiento() {
         return "nadar";

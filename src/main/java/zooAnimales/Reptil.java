@@ -17,7 +17,9 @@ public class Reptil extends Animal{
         this.largoCola = largoCola;
         listado.add(this);
     }
-    public Reptil() {}
+    public Reptil() {
+        listado.add(this);
+    }
 
     public String movimiento() {
         return "reptar";
